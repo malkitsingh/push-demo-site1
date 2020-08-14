@@ -1,8 +1,10 @@
-self.addEventListener("push", (event) => {
-  const data = event.data.json();
-  console.log("New notification", data);
-  const options = {
-    body: data.body,
-  };
-  event.waitUntil(self.registration.showNotification(data.title, options));
+console.log('Loaded service worker!');
+
+self.addEventListener('push', ev => {
+  const data = ev.data.json();
+  console.log('Got push', data);
+  self.registration.showNotification(data.title, {
+    body: 'Hello, World!',
+    icon: 'http://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png'
+  });
 });
