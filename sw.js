@@ -5,6 +5,6 @@ self.addEventListener('push', ev => {
   console.log('Got push', data);
   self.registration.showNotification(data.title, {
     body: data.body,
-    icon: 'http://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png'
+    icon: 'https://www.malkit.pro/img/profile.jpg'
   });
 });
