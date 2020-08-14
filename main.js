@@ -32,7 +32,7 @@ function sendSubscription(subscription) {
   });
 }
 
-export function subscribeUser() {
+function subscribeUser() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.ready
       .then(function (registration) {
