@@ -104,7 +104,7 @@ async function run() {
   console.log("Registering push");
   const subscription = await registration.pushManager.subscribe({
     userVisibleOnly: true,
-    applicationServerKey: urlBase64ToUint8Array(publicVapidKey),
+    applicationServerKey: convertedVapidKey,
   });
   console.log("Registered push");
 
